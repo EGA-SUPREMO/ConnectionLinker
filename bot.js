@@ -19,4 +19,7 @@
 
     selected = document.querySelector('textarea[name="message"]')
     selected.value = 'message.';
+    
+    selected = document.querySelector("[aria-label='Send invitation']");
+    selected.click();
 })();
