@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://www.linkedin.com/in/
+// @match        https://www.linkedin.com/in/*
 // @grant        none
 // ==/UserScript==
 
@@ -18,8 +18,11 @@
     selected.click();
 
     selected = document.querySelector('textarea[name="message"]')
-    selected.value = 'message.';
+    selected.value = 'Message.';
     
     selected = document.querySelector("[aria-label='Send invitation']");
+    selected.click();
+    
+    selected = document.querySelector("[aria-label='Done']");
     selected.click();
 })();
