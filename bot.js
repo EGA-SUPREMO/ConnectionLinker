@@ -3,7 +3,7 @@
 // @namespace    https://testtoshowskills.000webhostapp.com/
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
+// @author       EGA SUPREMO
 // @match        https://www.linkedin.com/in/*
 // @grant        none
 // ==/UserScript==
@@ -19,10 +19,11 @@
 
     selected = document.querySelector('textarea[name="message"]')
     selected.value = 'Message.';
-    
-    selected = document.querySelector("[aria-label='Send invitation']");
-    selected.click();
-    
-    selected = document.querySelector("[aria-label='Done']");
-    selected.click();
+    try {
+        selected = document.querySelector("[aria-label='Send invitation']");
+        selected.click();
+    } catch(e) {
+        selected = document.querySelector("[aria-label='Done']");
+        selected.click();
+    }
 })();
