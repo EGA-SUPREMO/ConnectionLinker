@@ -19,11 +19,12 @@
 
     selected = document.querySelector('textarea[name="message"]')
     selected.value = 'Message.';
-    try {
-        selected = document.querySelector("[aria-label='Send invitation']");
+    if(selected == null){
+        selected.disabled = false;
         selected.click();
-    } catch(e) {
+    } else {
         selected = document.querySelector("[aria-label='Done']");
+        selected.disabled = false;
         selected.click();
     }
 })();
