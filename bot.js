@@ -18,13 +18,13 @@
     selected.click();
 
     selected = document.querySelector('textarea[name="message"]')
-    selected.value = 'Message.';
+    selected.focus();
+    selected.value = 'Custom message.';
+    
     if(selected == null){
-        selected.disabled = false;
         selected.click();
     } else {
         selected = document.querySelector("[aria-label='Done']");
-        selected.disabled = false;
         selected.click();
     }
 })();
