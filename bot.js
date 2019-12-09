@@ -50,4 +50,9 @@
         selected = document.querySelector("[aria-label='Done']");
         selected.click();
     }
+    
+    var i = getCookie('counter');
+    setCookie('counter', i + 1, 200);
+
+    window.location.href = "https://www.linkedin.com/in/" + getCookie('links').split(",")[i];
 })();
