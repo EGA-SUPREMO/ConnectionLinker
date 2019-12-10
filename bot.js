@@ -40,16 +40,15 @@
     selected = document.querySelector("[aria-label='Add a note']");
     selected.click();
 
-    selected = document.querySelector('textarea[name="message"]')
+    selected = document.querySelector('textarea[name="message"]');
     selected.focus();
     selected.value = 'Custom message.';
     
     if(selected == null){
-        selected.click();
-    } else {
         selected = document.querySelector("[aria-label='Done']");
-        selected.click();
     }
+    
+    selected.click();
     
     var i = getCookie('counter');
     setCookie('counter', i + 1, 200);
