@@ -13,20 +13,25 @@
     
     var selected;
 
-    selected = document.querySelector(".pv-s-profile-actions");
-    selected.click();
-    selected = document.querySelector("[aria-label='Add a note']");
-    selected.click();
+    try {
+        selected = document.querySelector(".pv-s-profile-actions");
+        selected.click();
+        selected = document.querySelector("[aria-label='Add a note']");
+        selected.click();
 
-    selected = document.querySelector('textarea[name="message"]');
-    selected.focus();
-    selected.value = 'Custom message.';
+        selected = document.querySelector('textarea[name="message"]');
+        selected.focus();
+        selected.value = 'Custom message.';
     
-    if(selected == null){
-        selected = document.querySelector("[aria-label='Done']");
+        if(selected == null){
+            selected = document.querySelector("[aria-label='Done']");
+        }
+    
+        selected.click();
+    } catch(e) {
+        localStorage.bug_log = localStorage.bug_log + ',' + window.location.href.toString();
+        localStorage.bug_log1 = window.location.href.toString();
     }
-    
-    selected.click();
     
     var i = localStorage.counter;
     localStorage.counter -= -1;
