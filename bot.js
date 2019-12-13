@@ -14,6 +14,9 @@
     var selected;
 
     try {
+        var firstname;
+        firstname = document.querySelector('.t-24').innerText.split(" ")[0];
+        
         selected = document.querySelector(".pv-s-profile-actions");
         selected.click();
         selected = document.querySelector("[aria-label='Add a note']");
@@ -21,8 +24,9 @@
 
         selected = document.querySelector('textarea[name="message"]');
         selected.focus();
-        selected.value = 'Custom message.';
+        selected.value = 'Hi' + firstname + '! Custom message.';
     
+        selected = document.querySelector("[aria-label='Send invitation']");
         if(selected == null){
             selected = document.querySelector("[aria-label='Done']");
         }
