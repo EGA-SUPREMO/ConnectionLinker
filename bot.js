@@ -26,12 +26,27 @@
         selected.focus();
         selected.value = 'Hi' + firstname + '! Custom message.';
     
-        selected = document.querySelector("[aria-label='Send invitation']");
-        if(selected == null){
-            selected = document.querySelector("[aria-label='Done']");
+        function check() {
+            if(!selected.disabled) {
+                selected.click();
+
+                var i = localStorage.counter;
+                localStorage.counter -= -1;
+
+                setTimeout(function() {
+                    window.location.href = "https://www.linkedin.com/in/" + localStorage.links.split(",")[i] + "/";
+
+                    setTimeout(function() {
+                        location.reload();
+                    }, 4000);
+                }, 4000);
+                return;
+            }
+            setTimeout(function() {
+                check();
+            }, 2000);
         }
-    
-        selected.click();
+        check();
     } catch(e) {
         localStorage.bug_log = localStorage.bug_log + ',' + window.location.href.toString();
         localStorage.bug_log1 = window.location.href.toString();
