@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       EGA SUPREMO
-// @match        https://www.linkedin.com/in/*
+// @match        https://www.linkedin.com/in/*/
 // @grant        none
 // ==/UserScript==
 
@@ -52,8 +52,4 @@
         localStorage.bug_log1 = window.location.href.toString();
     }
     
-    var i = localStorage.counter;
-    localStorage.counter -= -1;
-
-    window.location.href = "https://www.linkedin.com/in/" + localStorage.links.split(",")[i] + "/";
 })();
