@@ -1,4 +1,4 @@
-# Bot fol LinkedIn
+# Bot for LinkedIn
 Bot to get connections faster in LinkedIn, I recommend use Tapermonkey or Greasemonkey
 
 This bot click in the button "connect" and the button "add a note" then in the textarea paste the custom message then manually you need to press any key and the bot click in the button Send, change the url and reloads the page.
